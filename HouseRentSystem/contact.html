@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - House Rent System</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="contact.css">
+    <script>
+        function lgn() {
+        user=document.forms["login"]["usr"];
+        mail=document.forms["login"]["mail"];
+        address=document.forms["login"]["address"];
+    
+        if(user.value == "Priya"&& mail.value=="priya@gmail.com" && address.value=="174,northstreet,villupuram") {
+        alert('Thank you for contacting us, ' + user.value + '! We will get back to you soon.');
+        this.reset();
+        } else {
+        alert('Please fill out all fields correctly.');
+    }
+};
+
+
+
+    </script>
+    
+</head>
+<body>
+    <header class="header">
+        <div class="wrapper">
+            <h1>HOUSE RENTAL SYSTEM</h1>
+        </div>
+        
+    </header>
+    <nav class="menu">
+        <div class="wrapper">
+            <ul>
+                <a href="index.html"><li>Home</li></a>
+                <a href="Login.html"><li>Log In</li></a>
+                <a href="house.html"><li>Houses</li></a>
+                <a href="aboutus.html"><li>About Us</li></a>
+                <a href="contact.html"><li>Contact Us</li></a>
+            </ul>
+        </div>
+    </nav>
+    <h2><center>Contact Us</center></h2>
+    <main>
+        <section class="contact-info">
+            <h2>Our Contact Information</h2>
+            <p>Email: info@houserentsystem.com</p>
+            <p>Phone: +9123567890</p>
+            <p>Address: 143 Main St, chennai, India</p>
+        </section>
+        <section class="contact-form">
+            <h2>Contact Information</h2>
+            <form id="contactForm" name="login" onsubmit="return lgn()">   
+                <label for="">UserName:</label>
+                <input type="text" name="usr" id="usr" placeholder="Enter the username" required autofocus >
+                <label for="">Email ID:</label>
+                <input type="email" name="mail" id="mail" placeholder="Enter the mail id" required autofocus>
+                <label for="">Phone No:</label>
+                <input type="text" name="phone" id="phone" placeholder="Enter the Number" maxlength="10" required autofocus>
+                <label for="">Address:</label>
+                <input type="text" name="address" id="address" placeholder="Enter currect Address" required autofocus>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+       
+                <button type="submit" class="btn btn-success">Submit</button>
+                <a href="./book.html"><button type="button" class="btn btn-success">Back</button></a>
+              
+            </form>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="wrapper">
+            <p>&copy; <a href="https://www.ijsrp.org/research-paper-1114/ijsrp-p35101.pdf">House Rental System</a>. All rights reserved 2024.</p>
+        </div>
+    </footer>
+    <script src="contact.js"></script>
+</body>
+</html>

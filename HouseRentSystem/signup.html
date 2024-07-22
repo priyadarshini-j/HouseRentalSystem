@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+   
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+    <script>
+        function lgn() {
+            user=document.forms["login"]["usr"];
+            password=document.forms["login"]["psw"];
+            mail=document.forms["login"]["mail"];
+            if(user.value==""){
+                alert("please enter name");
+                user.focus()
+                return fasle;
+            }
+            else if(password.value==""){
+                alert("please enter password");
+                password.focus()
+                return false;
+            }
+            else if(mail.value==""){
+                alert("please enter Emailid");
+                password.focus()
+                return false;
+            }
+            
+            else if(user.value == "Priya" && password.value=="Priya123"  && mail.value=="priya@gmail.com"){
+                alert("Logging in successfully");
+                window.location.href="login.html";
+                return false;
+                
+            }
+            
+            else{
+                alert("user not found");
+                return false
+            }
+        }
+    </script>
+</head>
+<body>
+    <header class="header">
+        <div class="wrapper">
+            <h1>HOUSE RENTAL SYSTEM</h1>
+        </div>
+        
+    </header>
+    
+    <form name="login" onsubmit="return lgn()">   
+    <h1><font color="darkgreen">Sign Up</font> </h1><br><br>
+        <label for="">UserName</label> &nbsp;
+        <input type="text" name="usr" id="usr" placeholder="Enter the username" autofocus ><br><br>
+        <label for="">Email ID</label>&nbsp; &nbsp;&nbsp;&nbsp;
+        <input type="email" name="mail" id="mail" placeholder="Enter the mail id" autofocus><br><br>
+        <label for="">Password</label>&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="password" name="psw" id="psw" placeholder="Enter currect password" autofocus><br><br>
+        <label for="">Phone No</label>&nbsp;&nbsp;&nbsp;
+        <input type="text" name="pno" id="pno" placeholder="Enter the Number" maxlength="10" autofocus required><br><br>
+        <label for="">Gender</label>
+        <input type="radio" name="Gender" id="male">
+        <label for="">Male</label>
+        <input type="radio" name="Gender" id="Female">
+        <label for="">Female</label>
+        <input type="radio" name="Gender" id="others">
+        <label for="">Others</label><br><br>
+       
+        <a href="Login.html"> <button type="submit" class="btn btn-success">SignUp</button></a>
+        <input type="reset" class="btn btn-success" placeholder="RESET" /><br /><br>
+        <p>Already have an account? <a href="login.html">Login</a></p>
+       
+    </form> 
+
+<footer class="footer">
+    <div class="wrapper">
+        <p>&copy; <a href="https://www.ijsrp.org/research-paper-1114/ijsrp-p35101.pdf">House Rental System</a>. All rights reserved 2024.</p>
+    </div>
+</footer>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+    .header{
+    background-color:darkgreen;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    text-shadow: 3px 3px red;
+}
+.menu ul{
+    list-style-type: none;
+}
+.menu ul a{
+    color:darkgreen;
+    text-decoration: none;
+    padding: 1%;
+}
+.menu ul a:hover{
+    background-color:darkgreen;
+    color: white;
+}
+.menu ul a li{
+    display: inline;
+}
+form{
+    width: 50%;
+    margin: 0 auto;
+    border: 2px solid darkgreen;
+    padding: 2%;
+    margin: 2% auto;
+    text-align: center;
+    border-radius: 20px;
+}
+label{
+    color:darkgreen;
+}
+
+.footer{
+    background-color: darkgreen;
+    color: white;
+    padding: 3px;
+}
+.footer p{
+    text-align: center;
+}
+.footer p a{
+    color: lightblue;
+}
+.footer p a:hover{
+    text-decoration: none;
+}
+
+
+
+
+</style>
+</body>
+</html>
+</html>

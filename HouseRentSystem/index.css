@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+.header{
+    background-color:darkgreen;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    text-shadow: 3px 3px red;
+}
+.menu ul{
+    list-style-type: none;
+}
+.menu ul a{
+    color:darkgreen;
+    text-decoration: none;
+    padding: 1%;
+}
+.menu ul a:hover{
+    background-color:darkgreen;
+    color: white;
+}
+.menu ul a li{
+    display: inline;
+}
+
+
+.d-flex{
+    width: 400px;
+    margin-left: 500px;
+    
+}
+
+
+.footer{
+    background-color: darkgreen;
+    color: white;
+    padding: 3px;
+}
+.footer p{
+    text-align: center;
+}
+.footer p a{
+    color: lightblue;
+}
+.footer p a:hover{
+    text-decoration: none;
+}
+
+
+

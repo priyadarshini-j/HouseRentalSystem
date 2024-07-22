@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="book.css">
+    <script>
+        function lgn() {
+        cardName=document.forms["login"]["cardName"];
+        cardNumber=document.forms["login"]["cardNumber"];
+        cardCvv=document.forms["login"]["cardCvv"];
+        expiryDate=document.forms["login"]["expiryDate"];
+
+        if(cardName.value == "priyadharshini"&& cardNumber.value=="123456123456" && cardCvv.value=="123"&& expiryDate.value=="04/2024") {
+            window.location.href="Success.html";
+            return false;
+            
+        } else {
+            window.location.href="failure.html";
+            return false;
+        }
+        };
+
+
+
+    </script>
+</head>
+<body>
+    <h1>Welcome To Our House</h1>
+    <main>
+        <h2>Payment</h2><br>
+    <form id="payment-form" class="payment-form" name="login" onsubmit="return lgn()">
+        <div class="form-field">
+            <label>Name on Card</label>
+            <input type="text" id="cardName" name="cardName" placeholder="Enter Name" required/>
+        </div><br>
+        <div class="form-field">
+            <label>Card Number</label>
+            <input type="text" id="cardNumber" name="cardNumber" placeholder="0000-0000-0000" required/>
+        </div><br>
+
+        <div class="payment-form-group-field">
+            <div class="form-field">
+                <label>CVV</label>
+                <input type="password" id="cardCvv" name="cardCvv" placeholder="CVV" required/>
+            </div><br>
+            <div class="form-field expiry-field">
+                <label>Expiry Date</label>
+                <input type="text" id="expiryDate" placeholder="MM/YYYY" name="expiryDate" required/>
+            </div><br>
+        </div>
+        <a href="Success.html"> <button type="submit" class="btn btn-success">Pay Now</button></a>
+    </form>
+    </main>
+</body>
+</html>
